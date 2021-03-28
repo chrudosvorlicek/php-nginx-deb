@@ -19,8 +19,6 @@ RUN preset install fpm \
     && preset install xdebug \
     && preset config laravel
 
-
-
 WORKDIR /var/www/
 
 ENTRYPOINT [ "docker-entrypoint" ]
