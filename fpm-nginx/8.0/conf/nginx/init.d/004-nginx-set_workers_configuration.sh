@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 cores=$(nproc --all)
 defaultConnections="4096"

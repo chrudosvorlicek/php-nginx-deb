@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-[[ -z "${HTTP_ERRORS_DIR}" ]] && HTTP_ERRORS_DIR="/opt/litea/conf/nginx/errors"
+[[ -z "${HTTP_ERRORS_DIR}" ]] && HTTP_ERRORS_DIR="/opt/preset/conf/nginx/errors"
 
 mkdir -p "${HTTP_ERRORS_DIR}"
 

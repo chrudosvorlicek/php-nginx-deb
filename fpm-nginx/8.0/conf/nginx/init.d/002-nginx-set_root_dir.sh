@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 [[ -z "${NGINX_ROOT_DIR}" ]] && NGINX_ROOT_DIR="/var/www/public"
 

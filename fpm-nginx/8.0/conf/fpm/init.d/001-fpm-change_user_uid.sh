@@ -1,10 +1,4 @@
-#!/bin/sh
-
-if [[ ! -z "${UID}" ]] ; then
-    echo "Warning: UID env variable has been deprecated and will be removed in future releases. Use FPM_USER_ID instead."
-
-    FPM_USER_ID="${UID}"
-fi
+#!/bin/bash
 
 if [[ ! -z "${FPM_USER_ID}" ]] ; then
     echo "FPM_USER_ID specified: ${FPM_USER_ID}"
@@ -16,14 +10,11 @@ if [[ ! -z "${FPM_USER_ID}" ]] ; then
 
     echo "Creating new user www-data"
 
-    # -D Don't assign password
-    # -H Don't create home directory
-    # -g GECOS field
     adduser \
         -u "${FPM_USER_ID}" \
-        -D \
-        -H \
-        -g "" \
+        --disabled-password \
+        --no-create-home \
+        --gecos "" \
     www-data
 
     # Create composer cache directory

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # docker-entrypoint.sh v1.0.0
 
 [[ -z "${APP_DIR}" ]] && APP_DIR="/var/www"
@@ -16,7 +16,8 @@ if [[ ! -z "${RUN_INIT_SCRIPTS}" && "${RUN_INIT_SCRIPTS}" == "1" ]]; then
 
     for filename in "${INIT_DIR}"/*.sh; do
         if [[ -f "${filename}" ]]; then
-            sh "${filename}"
+            echo "${filename}"
+            bash "${filename}"
 
             if [[ "${?}" != 0 ]]; then
                 echo "ERROR: init script ${filename} exitted with non-zero code"

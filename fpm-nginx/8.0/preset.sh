@@ -128,7 +128,7 @@ function install_package {
 
     success "${pkg} installed successfully"
 
-    echo "${pkg}" > "${INSTALLED_PACKAGES}"
+    echo "${pkg}" >> "${INSTALLED_PACKAGES}"
 }
 
 # ================== #
