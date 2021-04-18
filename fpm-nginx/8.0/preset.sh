@@ -58,6 +58,7 @@ function preset_laravel {
         && docker-php-ext-install \
             bcmath \
             calendar \
+            intl \
             opcache \
             pdo_mysql \
             zip \

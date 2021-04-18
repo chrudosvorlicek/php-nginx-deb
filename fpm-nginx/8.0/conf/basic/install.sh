@@ -7,6 +7,7 @@ apt-get update \
     nano \
     ssh \
     wget \
+    unzip \
   && apt-get clean \
   && rm -rf /var/cache/apt/*
 
